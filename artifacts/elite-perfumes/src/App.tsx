@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowUpLeft, Check, Menu, MessageCircle, PackageCheck, ShieldCheck, Sparkles, X } from 'lucide-react';
 
-const WHATSAPP_DEMO_URL = 'https://wa.me/966500000000';
+const WHATSAPP_URL = 'https://wa.me/966598986900';
 const INSTAGRAM_URL = 'https://www.instagram.com/';
 const SNAPCHAT_URL = 'https://www.snapchat.com/';
 
@@ -42,7 +42,7 @@ const reviews = [
 ];
 
 function inquiryUrl(message: string) {
-  return `${WHATSAPP_DEMO_URL}?text=${encodeURIComponent(message)}`;
+  return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 }
 
 function App() {
@@ -267,7 +267,7 @@ function App() {
               <h2 className="mb-4 text-sm font-semibold text-[#d7c194]">يسعدنا تواصلك</h2>
               <p className="text-xs text-[#c8bead]">المملكة العربية السعودية</p>
               <a href={inquiryUrl('مرحباً، أرغب بالتواصل مع خدمة عملاء عطور النخبة.')} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 text-xs text-[#c8bead] transition-colors hover:text-white" data-testid="link-footer-whatsapp"><MessageCircle size={14} /> تواصل عبر واتساب</a>
-              <p className="mt-3 text-[10px] leading-5 text-[#938875]">رابط واتساب تجريبي قابل للتعديل:<br /><span dir="ltr" className="font-mono">https://wa.me/966500000000</span></p>
+              <p className="mt-3 text-[10px] leading-5 text-[#938875]">رقم واتساب:<br /><span dir="ltr" className="font-mono">059 898 6900</span></p>
               <div className="mt-4 flex gap-4 text-xs text-[#d6c8ad]"><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white" data-testid="link-social-instagram">إنستغرام</a><a href={SNAPCHAT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white" data-testid="link-social-snapchat">سناب شات</a></div>
             </div>
           </div>
