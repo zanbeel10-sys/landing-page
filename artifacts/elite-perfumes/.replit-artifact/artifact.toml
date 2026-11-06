@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "عطور النخبة"
+description = "صفحة هبوط عربية فاخرة لمتجر عطور سعودي، تعرض العطور والعروض ومميزات المتجر وآراء العملاء مع تواصل مباشر عبر واتساب."
+version = "1.0.0"
+id = "artifacts/elite-perfumes"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25611
+
+[services.development]
+run = "pnpm --filter @workspace/elite-perfumes run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/elite-perfumes", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/elite-perfumes/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25611"
+BASE_PATH = "/"
